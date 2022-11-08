@@ -9,3 +9,32 @@ let queue = [
   "catHorse",
   "dogPig",
 ];
+// 5a. Yet another 'catHorse' turns up at the nightclub door. Use an array method to add them to the back of the queue.
+queue.push("catHorse");
+console.log('Cathorse Join the queue',queue);
+// 5b. The queue is moving ever slowly forwards, and a mutated animal from the front may enter the nightclub. Remove a mutated animal from the front of the queue using an array method.
+queue.shift();
+console.log('Queue Move 1 space',queue);
+// 5c. Oh my. An 'owlDonkey' has appeared at the door. Put them straight to the front of the queue using an array method.
+queue.unshift("owlDonkey");
+console.log('Vip member in the Queue',queue);
+// 5d. The queue really IS moving very slowly. The 'catHorse' at the back of the queue decides to call it a night. Remove the 'catHorse' at the back of the queue using an array method.
+queue.pop();
+console.log('Angry of waiting and leave',queue);
+// 5e. You have received an emergency phone call concerning the 'kangarooBear' in the middle of the queue. Use an array method to remove the 'kangarooBear' from the middle of the queue.
+queue.find((item,index)=>{
+  if(item === "kangarooBear"){
+    queue.splice(index,1);
+  }
+});
+console.log('Emergency call and remove',queue);
+// console.log(queue);
+// 5f. Classic. A group of 'rabbitSalmon' have decided to form an unofficial queue next to your queue. Using an array method, merge the unofficial queue into the original queue, so that all of the 'rabbitSalmon' are at the back of the queue.
+const unofficialQueue = [
+  "rabbitSalmon",
+  "rabbitSalmon",
+  "rabbitSalmon",
+  "rabbitSalmon",
+];
+queue = queue.concat(unofficialQueue);
+console.log('Merge unofficial queue',queue);
