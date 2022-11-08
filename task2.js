@@ -7,5 +7,10 @@ let animals = [
     "horse",
     "basalisk",
   ];
-  
-let bListAnimals = // Your 'filter' code here.
+  //filter animal that start withn letter b
+let bListAnimals = animals.filter(
+  (animal)=>{
+    return animal.startsWith("b");
+  }
+)
+console.log(bListAnimals);
